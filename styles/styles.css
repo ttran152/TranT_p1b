@@ -1,0 +1,862 @@
+/* This will effect everything from 0 to 576px */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  margin: 0;
+  font: 400 0.75rem "Work Sans", sans-serif;
+  color: black;
+}
+.flex {
+  display: flex;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.center-text {
+  text-align: center;
+  align-items: center;
+}
+.container {
+  width: 83.2%;
+  margin: 0 auto;
+}
+.lightblue {
+  background-color: #e9f7ff;
+}
+.mediumblue {
+  background-color: #c8ebff;
+}
+.darkblue {
+  background-color: #78d5ff;
+}
+.deepblue {
+  background-color: #027ad9;
+}
+.green {
+  color: #00867d;
+}
+.orange {
+  color: #ef7000;
+}
+.brown {
+  color: #9d8e87;
+}
+.burgundy {
+  color: #99003d;
+}
+.deepblue-text {
+  color: #027ad9;
+}
+.flip {
+  transform: scaleX(-1);
+}
+h1 {
+  font: 500 3.5rem "Work Sans", sans-serif;
+  color: #0c9cd9;
+}
+h2 {
+  font: 600 1.75rem "Work Sans", sans-serif;
+  color: #002e60;
+}
+h3 {
+  font: 600 1.5rem "Work Sans", sans-serif;
+  color: #0c9cd9;
+}
+h4 {
+  font: 500 1.25rem "Work Sans", sans-serif;
+  color: black;
+}
+h5 {
+  font: 400 1rem "Work Sans", sans-serif;
+  color: #002e60;
+}
+/* HEADER */
+header {
+  flex-direction: row;
+  align-items: center;
+  padding-top: 1em;
+}
+header div a img {
+  height: 2.875rem;
+  padding-right: 0.5rem;
+}
+header p {
+  font-weight: 700;
+  color: #0c9cd9;
+}
+/* NAVBAR */
+.menu,
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header ul li a,
+footer ul li a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #0c9cd9;
+}
+header ul li a:hover {
+  color: #0c9cd9;
+  background-color: none;
+}
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#menu-toggle {
+  display: none;
+}
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #0c9cd9;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+/* HERO IMAGE */
+.hero {
+  background: url(../images/hero.jpg) no-repeat;
+  background-size: cover;
+  color: #002e60;
+  height: 12.375rem;
+  margin-top: 1.25rem;
+}
+/* SHAREHOLDER LETTER */
+.letter,
+.history,
+.review {
+  margin-top: 2.5rem;
+}
+.letter div:nth-of-type(1){
+  flex-direction: column;
+}
+.letter p {
+  font-style: italic;
+}
+.headqtr-1999,
+.headqtr-2019 {
+  margin: auto;
+  display: block;
+}
+.headqtr-1999 {
+  height: 21.625rem;
+}
+.headqtr-2019 {
+  height: 12.563rem;
+}
+.ending-letter {
+  margin: 0;
+  height: 7.5rem;
+}
+.signature img {
+  height: 2.5rem;
+}
+.ceo-picture img {
+  height: 7.5rem;
+}
+/* OUR HISTORY */
+.history img {
+  height: 14.813rem;
+  width: 100%;
+}
+/* 2019 IN REVIEW */
+.review{
+  flex-direction: column;
+}
+.review-container {
+  margin: 0 2.188rem;
+  flex-direction: column;
+  align-items: center;
+}
+.review-container h2 {
+  padding: 1.25rem 0 0 0;
+  margin: 0;
+}
+.review-container h4 {
+  padding: 0.5rem 0 2.5rem 0;
+  margin: 0;
+}
+.icon {
+  padding: 0 4.5rem;
+  width: 100%;
+}
+/* RANKING */
+.ranking{
+  flex-direction: column;
+}
+.ranking,
+.download {
+  padding: 0 2.188rem;
+}
+.ranking h1 {
+  margin-bottom: 0;
+}
+.ranking h2 {
+  font-weight: 400;
+}
+/* DOWNLOAD */
+.download h4,
+.download h5 {
+  padding-bottom: 2.75rem;
+}
+.download img {
+  width: 100%;
+  padding-top: 3.125rem;
+}
+.download a {
+  text-decoration: none;
+  color: #0c9cd9;
+  font-weight: 600;
+}
+.download a:hover {
+  text-decoration: underline;
+}
+/* FOOTER */
+footer {
+  background-color: #002e60;
+  padding: 2.5rem 4.375rem;
+  align-items: center;
+}
+footer section {
+  flex-direction: column;
+}
+footer section div:nth-of-type(1) {
+  flex-direction: column;
+}
+footer section div:nth-of-type(2) .socialmedia {
+  flex-direction: row;
+}
+.footer-logo {
+  height: 2.75rem;
+}
+.footer-menu,
+.socialmedia {
+  margin: 1.25rem 0;
+}
+.footer-menu {
+  justify-content: space-around;
+}
+footer ul li a:hover {
+  color: white;
+  text-decoration: none;
+}
+.socialmedia img {
+  height: 1.5rem;
+  justify-content: space-around;
+}
+footer section a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+}
+footer section a:hover {
+  text-decoration: underline;
+}
+/* STOCK PERFORMANCE */
+.stock-container,
+.finance-invest {
+  flex-direction: column;
+  align-items: center;
+}
+.stock-info,
+.invest-info {
+  width: 80%;
+  text-align: left;
+  margin: 1.25rem;
+  padding: 1.688rem;
+}
+.stock-graph {
+  margin-bottom: 2rem;
+}
+.stock-graph img {
+  width: 83.2%;
+}
+/* FINANCIAL ELEMENTS */
+.financial-overview img {
+  width: 100%;
+}
+.key-elements {
+  flex-direction: row;
+  justify-content: space-around;
+}
+.elements-column {
+  width: 100%;
+  flex-direction: column;
+}
+.elements-column p {
+  color: #2269ff;
+}
+.elements {
+  width: 80%;
+}
+.elements img {
+  width: 70%;
+}
+/* FINANCIAL INVEST */
+.finance-invest img {
+  width: 100%;
+}
+.growth div:nth-of-type(2) {
+  flex-direction: column;
+}
+.invest-info:nth-child(4) p {
+  color: white;
+  font-style: italic;
+}
+/* REVENUE */
+.revenue-info,
+.expense-info {
+  flex-direction: column;
+}
+/* EXPENSE */
+.owl-point {
+  width: 50%;
+  margin: 0 auto;
+}
+/* RESULT */
+.result img {
+  width: 100%;
+}
+/* BRAND NAME */
+.system-hero {
+  background: url(../images/design-hero.jpg) no-repeat;
+  background-size: cover;
+  color: #002e60;
+}
+.system-hero > div {
+  margin: 0 auto;
+  padding: 1.25rem 0;
+  width: 80%;
+}
+/* BRAND VOICE */
+.brand-voice {
+  flex-direction: row;
+}
+.brand-voice ul {
+  padding: 0;
+  width: 45%;
+  color: #0c9cd9;
+}
+/* DESIGN PRINCIPLES */
+.principle {
+  width: 40%;
+  margin-bottom: 2rem;
+}
+/* LOGO GUIDELINES */
+.design-principles,
+.logo-design > div,
+.logo-avoidance div,
+.logo-guideline > div,
+.colors > div {
+  flex-direction: column;
+}
+.logo-guideline div img {
+  width: 100%;
+}
+.logo-avoidance img {
+  width: 100%;
+  margin: 0 auto;
+}
+/* TYPOGRAPHY */
+.typography img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+/* ILLUSTRATION */
+.gallery,
+.gallery2,
+.gallery-row {
+  flex-direction: column;
+}
+.gallery-row img {
+  width: 100%;
+  margin: 0.2rem 0;
+}
+.illustration img {
+  width: 100%;
+}
+/* PHOTOGRAPHY */
+.photography img {
+  width: 100%;
+}
+.photography > div img {
+  width: 30%;
+}
+.photography > *:nth-child(4) img {
+  width: 50%;
+  margin: 0.5rem 0;
+}
+/* ICONOGRAPHY */
+.iconography > div {
+  flex-direction: column;
+}
+.iconography div div img {
+  width: 100%;
+}
+/* UI ELEMENTS */
+.ui-elements {
+  margin-bottom: 5rem;
+}
+.ui-elements img {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.icon-button img {
+  width: 30%;
+}
+.form {
+  flex-direction: column;
+}
+.form img {
+  width: 100%;
+}
+/* Media Queries */
+/* MEDIA QUERIES FOR NAVBAR */
+@media (min-width: 375px) and (max-width: 768px) /* for mobile */ {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid white;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: white;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+}
+/* MEDIA QUERIES FOR OTHER SECTIONS */
+@media (min-width: 576px) {
+  body,
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.3rem;
+  }
+
+  /* HOME PAGE */
+  .hero {
+    height: 18rem;
+  }
+  .history img {
+    height: 20rem;
+  }
+}
+@media (min-width: 768px) /* for tablets */ {
+  body,
+  p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.7rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+  }
+  .container {
+    width: 75%;
+  }
+  .footer-logo {
+    height: 4rem;
+  }
+  /* HOME PAGE */
+  header div a img {
+    margin-top: 1rem;
+  }
+  .hero {
+    height: 24rem;
+  }
+  .headqtr-1999 {
+    height: 30rem;
+  }
+  .headqtr-2019 {
+    height: 16rem;
+  }
+  .ending-letter {
+    height: 12rem;
+  }
+  .ceo-picture img {
+    height: 12rem;
+  }
+  .history img {
+    height: 28rem;
+  }
+  .history > img:nth-of-type(2){
+    margin-bottom: 3rem;
+  }
+  .review {
+    flex-direction: column;
+  }
+  .review-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .review-container div{
+    width: 40%;
+  }
+  .review-container img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .review-container h2{
+    font-size: 2rem;
+  }
+  .review-container h4{
+    font-size: 1.4rem;
+  }
+  /* FINANCE */
+  .elements img {
+    width: 50%;
+  }
+  /* DESIGN SYSTEM */
+  .principle img {
+    width: 50%;
+  }
+  .form {
+    flex-direction: row;
+  }
+  .form img {
+    width: 48%;
+  }
+  .ui-elements .container-mobile {
+    width: auto;
+  }
+}
+@media (min-width: 992px) /* for laptops */ {
+  .container {
+    width: 80%;
+  }
+  /* HOME PAGE */
+  .hero{
+    height: 32rem;
+  }
+  header div a img {
+    height: 4rem;
+    padding-right: 1rem;
+  }
+  .letter div:nth-of-type(1){
+    flex-direction: row;
+  }
+  .headqtr-1999{
+    margin-left: 2rem;
+  }
+  .ranking{
+    flex-direction: row;
+    padding: 0;
+  }
+  .ranking div{
+    width: 20%;
+  }
+  .ranking h1{
+    font-size: 1.8rem;
+  }
+  .ranking h2{
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  .download img{
+    width: 40%;
+  }
+  /* FINANCE */
+  .key-elements {
+    flex-direction: column;
+  }
+  .elements-column {
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    margin: 2rem auto;
+    justify-content: space-between;
+  }
+  .elements {
+    width: 20%;
+  }
+  .elements img {
+    height: 6rem;
+    object-fit: contain;
+  }
+  /* FOOTER */
+  footer {
+    padding-top: 8rem;
+  }
+  footer section,
+  footer section div:nth-of-type(1) {
+    flex-direction: row;
+  }
+  .footer-logo {
+    margin: 1.25rem;
+  }
+  .footer-menu {
+    flex-direction: column;
+  }
+  footer ul li {
+    padding: 0.3rem 0;
+  }
+  /* FINANCE */
+  .stock-container {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 10%);
+    overflow: hidden;
+  }
+  .stock-info {
+    width: 100%;
+    padding: 1rem;
+  }
+  .stock-container div:nth-of-type(1) {
+    grid-column: 1/6;
+    grid-row: 2/5;
+  }
+  .stock-container div:nth-of-type(2) {
+    grid-column: 6/14;
+    grid-row: 3/6;
+  }
+  .stock-container div:nth-of-type(3),
+  .finance-invest div:nth-of-type(3) {
+    grid-column: 3/8;
+    grid-row: 6/10;
+  }
+  .finance-invest {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(16, 5rem);
+    overflow: hidden;
+  }
+  .finance-invest div:nth-of-type(1) {
+    grid-column: 1/7;
+    grid-row: 4/6;
+  }
+  .finance-invest div:nth-of-type(2) {
+    grid-column: 6/11;
+    grid-row: 1/10;
+  }
+  .finance-invest div:nth-of-type(3) {
+    grid-column: 6/12;
+    grid-row: 10/17;
+  }
+  .finance-invest div:nth-of-type(4) {
+    grid-column: 1/7;
+    grid-row: 10/16;
+  }
+
+  .growth div:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+  .growth div:nth-of-type(2) ul {
+    margin: 2rem;
+  }
+  .growth div:nth-of-type(2) img {
+    width: 40%;
+    object-fit: contain;
+  }
+  .revenue-info {
+    flex-direction: row;
+  }
+  .revenue-info img,
+  .expense-info img {
+    width: 50%;
+    object-fit: contain;
+  }
+  .expense-info {
+    flex-direction: row;
+  }
+  .expense-info:nth-of-type(4),
+  .expense-info:nth-of-type(6),
+  .expense-info:nth-of-type(8),
+  .expense-info:nth-of-type(9) {
+    flex-direction: row-reverse;
+  }
+  .expense div:nth-of-type(2),
+  .expense div:nth-of-type(5) {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .expense-info img {
+    margin: 0 1.5rem;
+    object-fit: contain;
+  }
+  .expense-info .owl-point {
+    width: 20%;
+  }
+  /* DESIGN SYSTEM */
+  .system-hero {
+    background-position: bottom;
+  }
+  .system-hero > div {
+    padding: 5rem 0;
+  }
+  .principle img {
+    width: 50%;
+  }
+  .design-principles,
+  .logo-design div,
+  .logo-avoidance div,
+  .colors div,
+  .iconography div {
+    flex-direction: row;
+  }
+  .logo-avoidance div img {
+    width: 33%;
+  }
+  .logo-guideline div:nth-of-type(1),
+  .logo-guideline div:nth-of-type(2),
+  .logo-guideline div:nth-of-type(3) {
+    flex-direction: row;
+  }
+  .logo-guideline div:nth-of-type(4),
+  .logo-guideline div:nth-of-type(5) {
+    flex-direction: row-reverse;
+  }
+  .logo-guideline div:nth-of-type(1) img,
+  .logo-guideline div:nth-of-type(2) img,
+  .logo-guideline div:nth-of-type(3) img {
+    width: 50%;
+    padding: 0 2rem 2rem 0;
+  }
+  .logo-guideline div:nth-of-type(4) img {
+    width: 100%;
+    padding: 0 0 2rem 2rem;
+  }
+  .colors div img,
+  .iconography div img {
+    width: 60%;
+    margin: 0 0 2rem 2rem;
+  }
+  .typography img {
+    width: 90%;
+    margin: 1rem;
+  }
+  .gallery {
+    flex-direction: row;
+    margin: auto 0;
+  }
+  .gallery img {
+    margin: 0.5rem;
+  }
+  .gallery2 {
+    flex-direction: row;
+  }
+  .gallery2 div img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    padding: 1rem;
+  }
+  .iconography div div img {
+    width: 95%;
+  }
+  .ui-elements {
+    margin-bottom: 8rem;
+  }
+}
+@media (min-width: 1440px) /* for laptops */ {
+  .container {
+    width: 70%;
+  }
+  .footer-logo {
+    height: 6rem;
+    margin-right: 3rem;
+  }
+  .logo-guideline div:nth-of-type(4) img {
+    width: 80%;
+  }
+  .icon-button img {
+    width: 15%;
+  }
+  .ui-elements .chart {
+    width: 85%;
+  }
+}
