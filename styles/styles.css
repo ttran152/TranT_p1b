@@ -633,6 +633,16 @@ footer section a:hover {
   .headqtr-1999{
     margin-left: 2rem;
   }
+  .headqtr-2019{
+    width: 70%;
+    height: 100%;
+  }
+  .history img{
+    height: 34rem;
+  }
+  .review-container{
+    width: 70%;
+  }
   .ranking{
     flex-direction: row;
     padding: 0;
@@ -644,11 +654,11 @@ footer section a:hover {
     font-size: 1.8rem;
   }
   .ranking h2{
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 600;
   }
   .download img{
-    width: 40%;
+    width: 60%;
   }
   /* FINANCE */
   .key-elements {
@@ -689,7 +699,7 @@ footer section a:hover {
   .stock-container {
     display: grid;
     grid-template-columns: repeat(10, 10%);
-    grid-template-rows: repeat(10, 10%);
+    grid-template-rows: repeat(9, 10%);
     overflow: hidden;
   }
   .stock-info {
@@ -843,12 +853,49 @@ footer section a:hover {
   }
 }
 @media (min-width: 1440px) /* for laptops */ {
+  .ranking h1{
+    font-size: 2rem;
+  }
+  .ranking h2{
+    font-size: 1.5rem;
+  }
+  p, ul{
+    font-size: 1.5rem;
+  }
+  .hero{
+    height: 38rem;
+  }
+  .history img{
+    height: 45rem;
+  }
   .container {
     width: 70%;
   }
   .footer-logo {
     height: 6rem;
     margin-right: 3rem;
+  }
+  .finance-invest {
+    display: grid;
+    grid-template-columns: repeat(11, 10%);
+    grid-template-rows: repeat(19, 5rem);
+    overflow: hidden;
+  }
+  .finance-invest div:nth-of-type(1) {
+    grid-column: 1/7;
+    grid-row: 4/7;
+  }
+  .finance-invest div:nth-of-type(2) {
+    grid-column: 6/12;
+    grid-row: 3/10;
+  }
+  .finance-invest div:nth-of-type(3) {
+    grid-column: 6/12;
+    grid-row: 10/17;
+  }
+  .finance-invest div:nth-of-type(4) {
+    grid-column: 1/7;
+    grid-row: 11/18;
   }
   .logo-guideline div:nth-of-type(4) img {
     width: 80%;
